@@ -8,7 +8,7 @@ export const ModuleRoutes: Routes = [
   {
     path: 'module', component: ModuleComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard],
     children: [
-      {path: '', component: DashboardComponent},
+      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       {path: 'dashboard', component: DashboardComponent},
       {path: 'account', component: AccountComponent},
     ]
